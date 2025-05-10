@@ -1,6 +1,18 @@
+import { connection } from '../configs/database.js'; // ✅ Sửa lại đường dẫn
+
 const getHomePage = (req, res) => {
-  // Call models (if needed)
-  res.send('Hello World to duy hoang!');
+  async function testConnection() {
+    try {
+      const [results] = await connection.query('SELECT * FROM Users;');
+      console.log('Check result:', results);
+      res.send(JSON.stringify(results));
+    } catch (err) {
+      console.error('MySQL Error:', err);
+    }
+  }
+
+  testConnection();
+  
 };
 
 const getABC = (req, res) => {
