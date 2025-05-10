@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "mysql2": "^2.3.3",
+    "nodemon": "^3.1.10"
+  },
+  "name": "backend",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "to duy hoang hoc backend",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./src/server.js"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "toduyhoang",
+  "license": "ISC"
+}
